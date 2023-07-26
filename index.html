@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>p5MediaPipe Hand Gesture Recognition</title>
+  <style>
+    body { margin: 0; }
+
+    /* Webcamビデオ表示を左右反転させる */
+    #webcam {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <body>
+    <!-- <h1>Gesture Recognition</h1> -->
+    <p id="message"></p>
+    <div id="image-container">
+      <img id="center-image" src="image/blue.png" alt="Center Image" />
+    </div>
+
+    <button id="webcamButton">
+      ENABLE WEBCAM
+    </button>
+    <div style="position: relative; height: 100vh;">
+      <video id="webcam" style="position:absolute;left:0px;top:0px;width:100%;height:auto" autoplay playsinline></video>
+      <div id="canvas2" style="position:absolute;left:0;top:0%;width:100%;height:auto"></div>
+      <div id="canvas" style="position:absolute;left:0px;top:0px"></div>
+    </div>
+    
+
+    <!-- include js libraries -->
+    <script src="./js/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="./js/hands.js" crossorigin="anonymous"></script>
+    <script src="./js/p5.js"></script>
+    <script src="./js/sketch.js"></script>
+ 
+      
+<script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.154.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.154.0/examples/jsm/"
+    }
+  }
+</script>
+
+    <!-- <script src="https://unpkg.com/three@0.154.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.154.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://unpkg.com/three@0.154.0/examples/js/loaders/MTLLoader.js"></script> -->
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    
+  </body>
+
+</html>
